@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<link rel="stylesheet" href="../CSS/webpage.css">
+	<script src="../Javascript/font_size.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHome Page</title>
+    
+</head>
+<body>
+    <nav>
+        <a href="encoding.html">Encoding Page</a>
+    </nav>
+
+    <h1>Home</h1>
+	<h2> A brief overview of the history of encryption</h2>
+	<h2> Encryption is needed to ensure that a message can be openly transmitted from A to B, with only authorised personal being able to understand the contents.
+	This usually involves a pre-agreed KEY, which is applied to the seemingly unintelligle messeges and then produces an understandavle message</h2>
+	
+
+    <table>
+        <tr>
+            <td>
+                <div class="image-container">
+                  <img src="../Images/Caesar.jpeg" alt="image1.jpg" style="float:left;">
+                </div>
+                <div class="text-container">
+                    Caesar Cypher
+                </div>
+            </td>
+            <td class="text">
+                The Caesar cypher was thought to have been developed close to 100BC and is an incredibly simple form of encryption.
+                The process involves rotating the alphabet by a set number. Caesar was known to prefer a shift of 4. So A would become
+                D and B would be E etc. It was one of the first instances of encryption being used to secure messages
+            </td>
+        </tr>
+        <tr>
+            <td class="text">
+                The Enigma machine machine was invented by Arthur Scherbius in 1918, but later on was used by the german military to 
+                send encrypted communications. It was famously cracked by a team at Blethcly Park involving Alan Turing and many others.
+                This ultimetly led to a huge advantage when fighting Germany in WW2 thanks to the efforts of Alan Turing and Bletchly Park.
+            </td>
+            <td>
+                <div class="image-container">
+                    <img src="../Images/enigma_machine.jpg" alt="image2.jpg" style="float:right;width:300px;height:300px;">
+                </div>
+                <div class="text-container">
+                    Enigma Machine
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="image-container">
+                    <img src="../Images/hash.jpeg" alt="image3.jpg">
+                </div>
+                <div class="text-container">
+                 Hashing Algorithm
+                </div>
+            </td>
+            <td class="text">
+                A hashing algorithm is a mathematical summery of an input of any length and then outputs a summary of that input into an output of fxied length.
+                This is commonly used with storing passwords in databases. The passwords are hashed and stored so that in the event of a data breach the attchers cannot understand the passwords in their true form. 
+                Another element known as a "salt" is added to the hash to make then more complex and difficult to decypher and elimenated the possibility of dublicate hashes if passwords are the same
+            </td>
+        </tr>
+    </table>
+
+    <div class="controls">
+        <span>Font Size</span>
+        <img src="../Images/plus.jpg" alt="Increase Font" class="plus" onclick="increaseFontSize()">
+        <img src="../Images/minus.jpg" alt="Decrease Font" class="minus" onclick="decreaseFontSize()">
+    </div>
+
+    
+</body>
+</html>

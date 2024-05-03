@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+ 	<html>
+	<head>
+		 <title> Encoding </title>
+		 <link rel="stylesheet" href="../CSS/webpage.css">
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"> </script>
+	</head>
+	 <body>
+	 
+	 <style> 
+			body {
+				background-color: lightblue;
+			}
+			
+	</style>
+		
+		<nav>
+			<a href="home.html">Home Page</a>
+		
+		</nav>
+		
+		<h1> Encoding (Hash) </h1>
+		<h2>In this page you will have the ability to hash a message with a selection of hashes - MD5, sha1, sha256 and sha512 from a dropdown menu. 
+		Simply click the submit button and your has will be displayed on the right</h2>
+	
+		<div class="container">
+			<div class="left">
+			<h2>Enter your text here</h2>
+				<input type="text" id="inputField" placeholder="Enter your text">
+			</div>
+			<div class="middle">
+				<button onclick="showOutput()" class="circle-button">Submit</button>
+			</div>
+			<div class="right">
+			<h2>Output Hash</h2>
+				<textarea id="output" rows="4" cols="30" readonly></textarea>
+			</div>
+		</div>
+		
+		
+		<!-- Function that calculated the hash value of the inout based on the Hash selected-->
+		<script>
+			function showOutput() {
+				
+				<!--Gets the input value-->
+				var inputValue = document.getElementById("inputField").value;
+				
+				<!--Gets the hash algorithm selected from the drop down menu -->
+				var selectedAlgorithm = document.getElementById("hashAlgorithm").value;
+
+				<!-- Compute the hash value based on the selected algorithm -->
+				var hashValue = CryptoJS[selectedAlgorithm](inputValue);
+
+				<!-- Display the hash value in the output box -->
+				document.getElementById("output").value = "Hash (" + selectedAlgorithm + "): " + hashValue;
+
+			}
+		
+		</script>
+		
+		
+		<label for="hashAlgorithm">Select a Hash Algorithm:</label>
+		<select id="hashAlgorithm">
+			<option value="MD5" selected>MD5</option>
+			<option value="SHA1">SHA1</option>
+			<option value="SHA256">SHA256</option>
+			<option value="SHA512">SHA512</option>
+		</select>
+		
+		<!-- Script that will pass on the selected hash from the dropdown menu -->
+		<script>
+			document.getElementById("hashAlgorithm").addEventListener("change", function() {
+				var selectedAlgorithm = this.value;
+					
+			});
+		
+		</script>
+		
+	</body>
+
+	
+ </html>

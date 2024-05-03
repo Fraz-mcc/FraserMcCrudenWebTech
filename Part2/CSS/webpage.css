@@ -1,0 +1,105 @@
+/*Author Fraser McCruden */
+/*Exteral CSS file with the styles for the website */
+
+
+body {
+	background-color: #8FBC8F;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	background-color: #333;
+	padding: 10px 0;
+	text-align: center;
+	border: 2px solid #fff; /* Add border around the nav */
+	border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin: 0 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+	background-color: #555;
+}
+
+h1 {
+	text-align: center;
+	color: #333;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table, th, td {
+	border: none;
+	text-align: center;
+	padding: 10px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.text-container {
+	text-align: center;
+	margin-top: 3px;
+}
+
+.controls {
+	position: fixed;
+	top: 60px;
+	right: 20px;
+	z-index: 1000;
+}
+
+.plus,
+.minus {
+	width: 20px;
+	height: 20px;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.plus {
+	margin-top: 5px;
+}
+
+.container {
+	display: flex;
+	align-items: center; /* Align items vertically */
+}
+
+.left {
+	flex: 1;
+	margin-right: 250px; /* Add margin to create space between left and middle */
+}
+
+.middle {
+	margin-right: 250px; /* Add margin to create space between middle and right */
+}
+
+.right {
+	flex: 1;
+	margin-left: auto; /* Push the output box to the far right */
+}
+			
+
+
+
+			
+.circle-button {
+	width: 80px; /* Adjust the width to your preference */
+	height: 80px; /* Same as width for a perfect circle */
+	border-radius: 80%;
+}
